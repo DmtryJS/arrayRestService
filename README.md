@@ -7,18 +7,18 @@ Web приложение которое на вход получат масси�
 `java -jar target\spring-boot-test-application.jar` что бы запустить jar файл  
 есть возможность запустить в docker  
 `docker build -f Dockerfile -t spring-boot-test-application .`  собрать образ из Dockerfile  
-`docker run -p 80:8080 spring-boot-test-application`   запустить контейнер
+`docker run -p 8080:8080 spring-boot-test-application`   запустить контейнер
 
 #### Как использовать
 Любым удобным способом послать HTTP GET запрос на 
 
-`http://localhost/maxIndex?values=-10,5,20,30`  
+`http://localhost:8080/maxValueIndex?values=-10,5,20,30`  
 
 Значения массива передаются в параметре values через запятую. В ответ получаем json вида  
-`{"result":3}`  
+`{"index":3}`  
 
 Попробовать можно попосылать на установленное приложение в интернете
 
-<a href='http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30' target="_blank"/>http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30</a>
+<a href='http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxValueIndex?values=-10,5,20,30' target="_blank"/>http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxValueIndex?values=-10,5,20,30</a>
 
 <p align="center"><img src="http://nerdist.com/wp-content/uploads/2016/07/ToiletMachine_GIF.gif" alt="have a fun"></p>

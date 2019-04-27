@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.dto.MaxValueResponse;
+import app.dto.MaxValueIndexResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,24 +12,24 @@ import app.services.ArrayService;
  * Created by user on 26.04.2019.
  */
 @RestController
-public class getMaxValueController {
+public class ArrayController {
 
 
     private ArrayService arrayService;
 
     @Autowired
-    public getMaxValueController(ArrayService arrayService) {
+    public ArrayController(ArrayService arrayService) {
         this.arrayService = arrayService;
     }
 
-    @RequestMapping(value = "/maxArrayValue", method = RequestMethod.GET)
-    public MaxValueResponse getArrayMaxValue(@RequestParam int[] values) {
+    @RequestMapping(value = "/maxValueIndex", method = RequestMethod.GET)
+    public MaxValueIndexResponse getArrayMaxValue(@RequestParam int[] values) {
 
         int maxValueIndex = arrayService.getMaxValueIndex(values);
 
-        return MaxValueResponse
+        return MaxValueIndexResponse
                 .builder()
-                .maxValue(maxValueIndex)
+                .index(maxValueIndex)
                 .build();
     }
 }

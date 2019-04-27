@@ -8,6 +8,6 @@ import lombok.Data;
  */
 @Builder
 @Data
-public class MaxValueResponse {
-    private int maxValue;
+public class MaxValueIndexResponse {
+    private int index;
 }

@@ -18,7 +18,7 @@ public class ArrayServiceTest {
     static class ArrayServiceImplTestContextConfiguration {
 
         @Bean
-        public ArrayService employeeService() {
+        public ArrayService arrayService() {
             return new ArrayServiceImpl();
         }
     }
@@ -28,16 +28,16 @@ public class ArrayServiceTest {
 
     @Test
     public void setArrayServicePositiveValuesTest() {
-        assertThat(arrayService.getMaxValueIndex(0,1,33,16)).isEqualTo(2);
+        assertThat(arrayService.getMaxValueIndex(0, 1, 33, 16)).isEqualTo(2);
     }
 
     @Test
     public void setArrayServiceNegativeValuesTest() {
-        assertThat(arrayService.getMaxValueIndex(-10,-3,-5,-1)).isEqualTo(3);
+        assertThat(arrayService.getMaxValueIndex(-10, -3, -5, -1)).isEqualTo(3);
     }
 
     @Test
     public void setArrayServiceMixValuesTest() {
-        assertThat(arrayService.getMaxValueIndex(-10,0,10,-1)).isEqualTo(2);
+        assertThat(arrayService.getMaxValueIndex(-10, 0, 10, -1)).isEqualTo(2);
     }
 }
