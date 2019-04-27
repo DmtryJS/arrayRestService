@@ -12,12 +12,13 @@ import java.util.stream.IntStream;
 public class ArrayServiceImpl implements ArrayService {
     @Override
     public int getMaxValueIndex(int[] array) {
-        int[] sortedArray = array.clone();
-        Arrays.sort(sortedArray);
-        int maxValue = sortedArray[sortedArray.length - 1];
-        return IntStream.range(0, array.length)
-                .filter(i -> array[i] == maxValue)
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("fds"));
+        int maxIndex = 0;
+        int arrayLength = array.length;
+        for (int i = 0; i < arrayLength; i++) {
+            if (array[maxIndex] < array[i]) {
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
     }
 }
