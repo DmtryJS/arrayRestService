@@ -19,6 +19,6 @@ Web приложение которое на вход получат масси�
 
 Попробовать можно попосылать на установленное приложение в интернете
 
-<a href='http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30'/>http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30</a>
+<a href='http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30' target="_blank"/>http://ec2-18-222-159-55.us-east-2.compute.amazonaws.com:8080/maxIndex?values=-10,5,20,30</a>
 
 <p align="center"><img src="http://nerdist.com/wp-content/uploads/2016/07/ToiletMachine_GIF.gif" alt="have a fun"></p>
